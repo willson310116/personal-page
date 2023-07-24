@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Wilson's page - Particle filter slam</title>
+		<title>Wilson's page - Particle Filter SLAM</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -22,20 +22,23 @@
 						<a href="index.html" class="logo">Home</a>
 					</header>
 
-				<!-- Nav
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">This is Massively</a></li>
-							<li class="active"><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav> -->
+				<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<!-- <li><a href="generic.html">Generic Page</a></li>
+						<li><a href="elements.html">Elements Reference</a></li> -->
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="assets/pdfs/Resume_Wilson.pdf">CV</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/weilinliao/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+						<li><a href="mailto:willson310116@gmail.com" class="icon fa fa-envelope"><span class="label"></span></a></li>
+						<li><a href="https://www.instagram.com/way_0915/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/willson310116" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="assets/pdfs/Resume_Wilson.pdf" class="icon fa-solid fa-file"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
 
 				<!-- Main -->
 					<div id="main">
@@ -49,7 +52,15 @@
 								</header>
 								<!-- <div class="image main"><img src="images/pic01.jpg" alt="" /></div> -->
 								<p>
-									In this project, with datasets generated from a differential-drive robot, I implemented particle filter slam on occupancy grid map with log odds.
+									SLAM (Simultaneous Localization and Mapping) is a technique used in robotics and computer vision to create a map of an unknown environment while at the same time keeping
+									track of the robot’s position within that environment. SLAM is a challenging problem because it involves estimating both the position of the robot and the location of landmarks in the
+									environment simultaneously, and dealing with the uncertainty that arises from sensor noise and imperfect knowledge of the environment.
+								</p>
+								<p>	
+									In this project, with datasets (encoder, LiDAR scan, IMU) generated from a differential-drive robot, I implemented particle filter slam on occupancy grid map with log odds. The result should be better after some hyperparameter tuning (prone to noise).
+									Click <a href="assets/pdfs/particle_filter_report.pdf">here</a> for project document!
+
+								
 								</p>
 
 								<div class="table-wrapper">
@@ -63,8 +74,8 @@
 										<tbody>
 											<tr>
 												
-												<td><span><img src="assets/gifs/20.gif" style="width: 400px; height: 400px; display: block; margin: 0 auto;"></td>
-												<td><span><img src="assets/gifs/21.gif" style="width: 400px; height: 400px; display: block; margin: 0 auto;"></td>
+												<td><span><img src="assets/gifs/20.gif" style="width: 420px; height: 420px; display: block; margin: 0 auto;"></td>
+												<td><span><img src="assets/gifs/21.gif" style="width: 420px; height: 420px; display: block; margin: 0 auto;"></td>
 											
 											</tr>
 										</tbody>
@@ -81,7 +92,7 @@
 									<hr />
 
 								<ul class="actions special">
-									<li><a href="https://github.com/willson310116/ECE276A_PR2" class="button">See repo</a></li>
+									<li><a href="https://github.com/willson310116/Particle-Filter-SLAM" class="button">See repo</a></li>
 								</ul>
 
 							</section>
