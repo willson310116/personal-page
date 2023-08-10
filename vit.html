@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Wilson's page - Transformer Attention Visualization</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home</a>
+					</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="assets/pdfs/Resume_Wilson.pdf">CV</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/weilinliao/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+						<li><a href="mailto:willson310116@gmail.com" class="icon fa fa-envelope"><span class="label"></span></a></li>
+						<li><a href="https://www.instagram.com/way_0915/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/willson310116" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="assets/pdfs/Resume_Wilson.pdf" class="icon fa-solid fa-file"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">December, 2021</span>
+									<h1>Transformer Attention Visualization<br /></h1>
+									<!-- <p>ECE276A Sensing and Estimation in Robotics @ NTU.</p> -->
+								</header>
+								<!-- <div class="image main"><img src="images/pic01.jpg" alt="" /></div> -->
+								
+								<!-- <p> 
+									Previously, I worked on SLAM problem with  <a href="particle_filter_slam.html">Particle Filter Slam</a>, but it's sensitive to noise and requires extensive hyperparameter tuning.
+
+								</p> -->
+								<p>	
+									<!-- In this project, with datasets (IMU data, stereo camera image) generated from road data of vechicle, I implemented extended Kalman filter (EKF) for visual-inertial SLAM and got fine results without much hyperparameter tuning.
+									Due to computational time on landmark mapping, I only selected a portion of the features for our EKF-SLAM. The result could be better if all the features are used.
+									Click <a href="assets/pdfs/vislam_report.pdf">here</a> for project document! -->
+									In this project, I analyze the attention map in transformer architecture in two differnet tasks, image classification and image captioning.
+								</p>
+
+								<p>
+									For image classification, I visualize the attention map between the [class] token (as query vector) and all patches (as key vectors) from the last multi-head
+									attention layer of vision transformerby comparing the weights of the attention layer.
+								
+									For image captioning, I visulaize cross-attention between images and generated caption from transformer decoder.
+								</p>
+
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th style="text-align: center; margin: 0 auto;">Label</th>
+												<th style="text-align: center; margin: 0 auto;">Attention Map on image classification</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th style="text-align: center; margin: 0 auto;">cat</th>
+												<td><span><img src="images/vit_cat.png" style="width: 800px; height: 320px; display: block; margin: 0 auto;"></td>
+											</tr>
+
+											<tr>
+												<th style="text-align: center; margin: 0 auto;">dog</th>
+												<td><span><img src="images/vit_dog.png" style="width: 800px; height: 320px; display: block; margin: 0 auto;"></td>
+											</tr>
+
+											<tr>
+												<th style="text-align: center; margin: 0 auto;">dog</th>
+												<td><span><img src="images/vit_wolf.png" style="width: 800px; height: 220px; display: block; margin: 0 auto;"></td>
+											</tr>
+										</tbody>
+
+									</table>
+								</div>
+
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<!-- <th style="text-align: center; margin: 0 auto;">Label</th> -->
+												<th style="text-align: center; margin: 0 auto;">Attention Map on image captioning</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<!-- <th style="text-align: center; margin: 0 auto;">A woman riding a bike with an umbrella.</th> -->
+												<td><span><img src="images/vit_bile.png" style="width: 780px; height: 320px; display: block; margin: 0 auto;"></td>
+											</tr>
+											<!-- <tr>
+												<th style="text-align: center; margin: 0 auto;">A young girl holding a slice of pizza in her hands.</th>
+												<td><span><img src="images/vit_pizza.png" style="width: 800px; height: 320px; display: block; margin: 0 auto;"></td>
+											</tr> -->
+											<tr>
+												<!-- <th style="text-align: center; margin: 0 auto;">Two sheep standing next to each other on a lush green field.</th> -->
+												<td><span><img src="images/vit_sheep.png" style="width: 820px; height: 320px; display: block; margin: 0 auto;"></td>
+											</tr>
+											<!-- <tr>
+												<th style="text-align: center; margin: 0 auto;">Two people on skis standing in the snow.</th>
+												<td><span><img src="images/vit_ski.png" style="width: 800px; height: 320px; display: block; margin: 0 auto;"></td>
+											</tr> -->
+											<tr>
+												<!-- <th style="text-align: center; margin: 0 auto;">A woman holding a purple umbrella next to a man.</th> -->
+												<td><span><img src="images/vit_umbrella.png" style="width: 850px; height: 300px; display: block; margin: 0 auto;"></td>
+											</tr>
+
+
+									</table>
+								</div>
+								
+								
+									<hr />
+
+								<!-- <ul class="actions special">
+									<li><a href="https://github.com/willson310116/ECE276A_PR3/tree/master" class="button">See repo</a></li>
+									<li><a class="button">TBD</a></li>
+								</ul> -->
+
+							</section>
+
+							<!-- <header id="header">
+								<a href="index.html" class="logo">Home</a>
+							</header> -->
+
+							
+
+							
+
+					</div>
+
+					
+					
+
+				
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
