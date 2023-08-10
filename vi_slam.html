@@ -49,25 +49,18 @@
 									<p>ECE276A Sensing and Estimation in Robotics @ UCSD.</p>
 								</header>
 								<!-- <div class="image main"><img src="images/pic01.jpg" alt="" /></div> -->
-								<p>
-									TBD
-								</p>
-								<p>
-									Click <a href="assets/pdfs/vislam_report.pdf">here</a> for project document!
-								</p>
+								
 								<p> 
-									Implement a visual-inertial simultaneous localization and mapping (SLAM) using an extended Kalman filter (EKF).
-									Given synchronized measurements from an inertial measurement unit (IMU) and a stereo camera as well as the intrinsic camera
-									calibration and the extrinsic calibration between the two sensors, specifying the transformation from the left camera frame to 
-									the IMU frame.
+									Previously, I worked on SLAM problem with  <a href="particle_filter_slam.html">Particle Filter Slam</a>, but it's sensitive to noise and requires extensive hyperparameter tuning.
 
 								</p>
-								<!-- <p>	
-									In this project, with datasets (encoder, LiDAR scan, IMU) generated from a differential-drive robot, I implemented particle filter slam on occupancy grid map with log odds. The result should be better after some hyperparameter tuning (prone to noise).
-									Click <a href="assets/pdfs/particle_filter_report.pdf">here</a> for project document!
+								<p>	
+									In this project, with datasets (IMU data, stereo camera image) generated from road data of vechicle, I implemented extended Kalman filter (EKF) for visual-inertial SLAM and got fine results without much hyperparameter tuning.
+									Due to computational time on landmark mapping, I only selected a portion of the features for our EKF-SLAM. The result could be better if all the features are used.
+									Click <a href="assets/pdfs/vislam_report.pdf">here</a> for project document!
 
 								
-								</p> -->
+								</p>
 
 								<div class="table-wrapper">
 									<table class="alt">
@@ -77,14 +70,28 @@
 												<th style="text-align: center; margin: 0 auto;">Scene 2</th>
 											</tr>
 										</thead>
+										
 										<tbody>
+											<tr>
+												
+												<td><span><img src="assets/gifs/vislam03.gif" style="width: 420px; height: 420px; display: block; margin: 0 auto;"></td>
+												<td><span><img src="assets/gifs/vislam10.gif" style="width: 420px; height: 420px; display: block; margin: 0 auto;"></td>
+												
+											
+											</tr>
+										</tbody>
+
+										
+
+										<!-- <tbody>
 											<tr>
 												
 												<td><span><img src="images/vislam_03.png" style="width: 420px; height: 420px; display: block; margin: 0 auto;"></td>
 												<td><span><img src="images/vislam_10.png" style="width: 420px; height: 420px; display: block; margin: 0 auto;"></td>
 											
 											</tr>
-										</tbody>
+										</tbody> -->
+										
 										<!-- <tfoot> -->
 											<!-- <tr> -->
 												<!-- <td colspan="2"></td> -->
