@@ -52,25 +52,32 @@
 								<!-- <div class="image main"><img src="images/pic01.jpg" alt="" /></div> -->
 								
 								<p> 
-									Previously, I worked on SLAM problem with real-world dataset (<a href="particle_filter_slam.html">Particle Filter Slam</a>, <a href="vi_slam.html">Visual Inertial Slam</a>),
-									but the data are pre-collected and processed (in some sense) for us, I only need to work on the core algorithms.
+									Previously, I worked on SLAM problem with real-world dataset (<a href="particle_filter_slam.html"><font color=blue> Particle Filter SLAM</font></a>,
+									<a href="vi_slam.html"><font color=blue> Visual Inertial SLAM</font></a>),
+									but the data are pre-collected and processed (in some sense) for us, I only needed to work on the core algorithms.
 
 								</p>
 								<p>	
-									In this project, it is required to develop end-to-end pipeline on Mbot Mega, a robot car, with Qualcomm Robotics RB5 Development Kit.
-									The pipeline includes perception, localization, mapping and motion control.
+									In this project, it is required to develop end-to-end pipeline on 
+									<a href="https://www.makeblock.com/pages/mbot-mega-smart-remote-control-robot">Mbot Mega</a>, a robot car, with 
+									<a href="https://www.qualcomm.com/developer/robotics-rb5-development-kit#overview">Qualcomm Robotics RB5 Development Kit</a>.
+									The pipeline is developed on ROS, and includes perception, localization, mapping and motion control stacks as follows:
 								</p>
 								<p>
-									For perception, our Mbot Mega use RGB camera (calibrated with ROS camera calibrator) to detect april tags with off-the-shelf apriltag detection.
-									For localization and mapping, I implemented a Kalman Filter for SLAM backend to keep track/estimate the pose of our robot and apriltags.
-									For motion control, I adopt PID controller to generate motion commands (given target waypoints) and 
-									apply kinematic model (Four Mecanum Wheeled Mobile Robot) to generate twist command for wheel contorl.
+									<ul>
+										<li>Perception: Our Mbot Mega uses RGB camera (calibrated with ROS camera calibrator) to detect april tags with off-the-shelf apriltag detection.</li>
+										<li>Localization and Mapping: I implemented a Kalman Filter for SLAM backend to keep track/estimate the poses of our robot and apriltags</li>
+										<li>Motion control: I adopted PID controller to generate motion commands (given target waypoints) and 
+											apply kinematic model (Four Mecanum Wheeled Mobile Robot) to generate twist command for wheel control</li>
+									</ul>
 								</p>
 								<p>	
-									The gifs below are the SLAM result, where green and purple points are estimate landmark and ground truth position respectively.
-									With octagon route, the robot is able to see the landmark with better viewing angle, thus provides a better estimation.
-									The result can be improve with better motor calibration or a non-linear filter (e.g. EKF, UKF).
-									Click <a href="assets/pdfs/rb5_report.pdf">here</a> for project document!
+									The gifs below are the SLAM results, where the green and purple points are estimate landmark and ground truth positions respectively,
+									and the red circles/ellipses are the covariance of their current positions.
+									With octagon route, the robot is able to see the landmark with better viewing angle, thus provides a better estimation;
+									more rounds of driving also yields a better estimation due to more observations.
+									The result can be improved with better motor calibration, non-linear filters (e.g. EKF, UKF) and system/observation noise tuning.
+									Click <a href="assets/pdfs/rb5_report.pdf"> <font color=blue> here</font></a> for project document!
 								</p>
 
 								<div class="table-wrapper">
@@ -92,23 +99,6 @@
 											</tr>
 										</tbody>
 
-										
-
-										<!-- <tbody>
-											<tr>
-												
-												<td><span><img src="images/vislam_03.png" style="width: 420px; height: 420px; display: block; margin: 0 auto;"></td>
-												<td><span><img src="images/vislam_10.png" style="width: 420px; height: 420px; display: block; margin: 0 auto;"></td>
-											
-											</tr>
-										</tbody> -->
-										
-										<!-- <tfoot> -->
-											<!-- <tr> -->
-												<!-- <td colspan="2"></td> -->
-												<!-- <td>100.00</td> -->
-											<!-- </tr> -->
-										<!-- </tfoot> -->
 									</table>
 								</div>
 								
@@ -116,9 +106,12 @@
 									<hr />
 
 								<ul class="actions special">
-									<!-- <li><a href="https://github.com/willson310116/ECE276A_PR3/tree/master" class="button">See repo</a></li> -->
+									<li><a href="#" class="button">Previous</a></li>
 									<li><a href="#" class="button">TBD</a></li>
+									<li><a href="motion.html" class="button">Next</a></li>
 								</ul>
+								
+								
 
 							</section>
 
